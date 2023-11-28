@@ -1,0 +1,39 @@
+console.clear();
+
+/*
+REDUCE :
+  array.reduce(accumulator,eachItem)=>{body}
+  
+  reduce is used to hold onto the accumulated value
+  we can hold onto the each number from the array
+  reduce itaretes(loops through the array) and accumulates array values
+*/
+
+var numbers = [8,1,4,12,66,3];
+/*
+eachNumber  :      1,     4,       12,       66,        3
+accumulator : 8   8+1=9  9+4=13  13+12=25  25+66=91   91+3=94
+
+*/
+ const result1=numbers.reduce(
+   
+   function(accumulator,eachNums){
+     console.log('Accumulator : '+accumulator)//8,9,13,25,91
+     console.log('Each Numbers : '+eachNums) // 1,4,12,66,3
+     return accumulator+ eachNums;
+   }
+ )
+   console.log(result1) // 94
+   
+   
+ // using arrow function
+   
+const result2=numbers.reduce(
+   
+ (accumulator,eachNums) => accumulator+ eachNums
+     
+   )
+  console.log(result2) // 94
+  
+  
+  
